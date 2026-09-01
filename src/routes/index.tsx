@@ -13,10 +13,10 @@ import {
 } from "lucide-react";
 
 
-import portrait from "@/assets/IMG_1688.jpeg.asset.json";
-import clinical from "@/assets/IMG_1687.jpeg.asset.json";
-import beforeAfter from "@/assets/IMG_1685.jpeg.asset.json";
-import painPhoto from "@/assets/IMG_1683.jpeg.asset.json";
+import portrait from "@/assets/photos/IMG_1688.jpeg";
+import clinical from "@/assets/photos/IMG_1687.jpeg";
+import beforeAfter from "@/assets/photos/IMG_1685.jpeg";
+import painPhoto from "@/assets/photos/IMG_1683.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
