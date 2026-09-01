@@ -12,7 +12,11 @@ export default defineConfig({
   vite: { base },
   nitro: { preset: "static" },
   tanstackStart: {
+    // Mesma entrada de SSR do build normal: sem ela, o bundler pode tentar
+    // usar o index.html como entrada de SSR e o build falha.
+    server: { entry: "server" },
     prerender: { enabled: true, crawlLinks: true },
     pages: [{ path: "/" }],
   },
 });
+
