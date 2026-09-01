@@ -25,17 +25,33 @@ jobs:
           bun-version: latest
 
       - name: Instalar dependências
-        run: bun install --frozen-lockfile
+        # Sem --frozen-lockfile: evita falha quando o lockfile foi gerado
+        # por outra versão do Bun.
+        run: bun install --no-save
 
       - name: Configurar Pages
         id: pages
         uses: actions/configure-pages@v5
+        with:
+          # Habilita o GitHub Pages automaticamente se ainda não estiver ativo.
+          enablement: true
+
+      - name: Definir caminho base
+        id: base
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          # base_path vem como "/repo" (ou vazio em usuario.github.io).
+          # Normaliza para sempre terminar com uma única "/".
+          base="${BASE_PATH:-/}"
+          base="/${base#/}"
+          base="${base%/}/"
+          echo "base=$base" >> "$GITHUB_OUTPUT"
+          echo "Base do site: $base"
 
       - name: Gerar site estático
         env:
-          # Em repositórios "usuario.github.io" o base é "/".
-          # Em qualquer outro repositório o base é "/nome-do-repositorio/".
-          GH_PAGES_BASE: ${{ steps.pages.outputs.base_path }}/
+          GH_PAGES_BASE: ${{ steps.base.outputs.base }}
         run: bun run build:static
 
       - uses: actions/upload-pages-artifact@v3
