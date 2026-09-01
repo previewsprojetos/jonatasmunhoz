@@ -12,7 +12,7 @@ import {
   Instagram,
 } from "lucide-react";
 
-import signature from "@/assets/IMG_1684.jpeg.asset.json";
+
 import portrait from "@/assets/IMG_1688.jpeg.asset.json";
 import clinical from "@/assets/IMG_1687.jpeg.asset.json";
 import beforeAfter from "@/assets/IMG_1685.jpeg.asset.json";
@@ -88,11 +88,9 @@ function Index() {
       {/* Nav */}
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-          <img
-            src={signature.url}
-            alt="Assinatura Dr. Jonatas Munhoz"
-            className="h-10 w-auto object-contain mix-blend-screen"
-          />
+          <span className="font-display text-xl tracking-[0.12em] text-gold">
+            Dr. Jonatas Munhoz
+          </span>
           <nav className="hidden gap-8 text-xs uppercase tracking-[0.2em] text-muted-foreground md:flex">
             <a href="#tratamentos" className="hover:text-primary">
               Tratamentos
@@ -263,12 +261,9 @@ function Index() {
             planejamento do sorriso e uma conduta simples: explicar tudo com clareza e
             respeitar o tempo de cada paciente.
           </p>
-          <img
-            src={signature.url}
-            alt="Assinatura Dr. Jonatas Munhoz"
-            className="mt-8 h-16 w-auto object-contain mix-blend-screen"
-            loading="lazy"
-          />
+          <p className="mt-8 font-display text-2xl tracking-[0.1em] text-gold">
+            Dr. Jonatas Munhoz
+          </p>
         </div>
       </section>
 
@@ -331,12 +326,9 @@ function Index() {
       {/* Footer */}
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 px-5 py-12 text-center">
-          <img
-            src={signature.url}
-            alt="Assinatura Dr. Jonatas Munhoz"
-            className="h-12 w-auto object-contain mix-blend-screen"
-            loading="lazy"
-          />
+          <p className="font-display text-2xl tracking-[0.1em] text-gold">
+            Dr. Jonatas Munhoz
+          </p>
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
             CRO-SP 176.816 · Paraguaçu Paulista / SP
           </p>
