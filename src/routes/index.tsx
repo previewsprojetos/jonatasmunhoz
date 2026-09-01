@@ -119,7 +119,7 @@ function Index() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <img
-          src={portrait.url}
+          src={portrait}
           alt="Dr. Jonatas Munhoz em seu consultório odontológico"
           className="absolute inset-0 h-full w-full object-cover opacity-35"
         />
@@ -164,7 +164,7 @@ function Index() {
       <section className="border-y border-border/60 bg-card">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:py-20">
           <img
-            src={painPhoto.url}
+            src={painPhoto}
             alt="Paciente com dor de dente"
             className="h-80 w-full rounded-sm object-cover object-[center_30%] md:h-[28rem] md:object-[center_35%]"
             loading="lazy"
@@ -232,7 +232,7 @@ function Index() {
             </a>
           </div>
           <img
-            src={beforeAfter.url}
+            src={beforeAfter}
             alt="Antes e depois de reabilitação estética do sorriso"
             className="w-full rounded-sm object-cover"
             loading="lazy"
@@ -243,7 +243,7 @@ function Index() {
       {/* Sobre */}
       <section id="sobre" className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:grid-cols-2">
         <img
-          src={clinical.url}
+          src={clinical}
           alt="Dr. Jonatas Munhoz realizando procedimento odontológico"
           className="h-80 w-full rounded-sm object-cover md:h-[30rem]"
           loading="lazy"
