@@ -168,7 +168,7 @@ function Index() {
           <img
             src={painPhoto.url}
             alt="Paciente com dor de dente"
-            className="h-72 w-full rounded-sm object-cover object-top md:h-96"
+            className="h-80 w-full rounded-sm object-cover object-center md:h-[28rem]"
             loading="lazy"
           />
           <div>
