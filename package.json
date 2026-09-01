@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "build:static": "vite build --config vite.config.ghpages.ts && node scripts/finish-static.mjs"
+    "build:static": "vite build --config vite.config.ghpages.ts && bun scripts/finish-static.mjs"
   },
   "overrides": {
     "rolldown": "1.2.1"
